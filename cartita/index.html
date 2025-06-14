@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>PARA MI BB</title>
+	<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">💘PARA ESA PERSONITA QUE SE ROBO MI CORAZON💘</span><br />
+<span class="comments">✨Mi sasha preciosa ya cumplimos 4 mesesote amorcito✨</span><br />
+<span class="comments">Gracias por ser mi pareja y mi mejor amiga, me encantaaa💞😽</span><br />
+Quiero que siempre sepas que : 
+<span class="placeholder">(</span><span class="string">Te amo🌟❤️ mucho corazon, nunca dudes de eso"</span>)
+<span class="placeholder"></span> y (<span class="string">" Cuanto más tiempo estoy contigo, más te amo ❤️."</span>)<br />
+<span class="comments">Y bueno amorcito, que tengamos muchos meses, años y decadas juntos </span><br />
+<span class="placeholder"></span>(<span class="string">"Te quiero con todo mi corazon, y siempre estare ahi paraa ti❤️❤️❤️"</span>)<br />
+<br />muaaaaaaaaaaaaa✨✨💘  <br />
+
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						NUESTRA HERMOSA HISTORIA COMENZO HACE✨
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">TE AMO!💘<br />
+						<div class="signature"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2025, 1, 14); //Modiica la fecha en la que se conocieron
+		together.setHours(15);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+
+
+</html>
